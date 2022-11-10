@@ -4,7 +4,6 @@ public class Car extends Transport implements Competing {
     public Car (String brand, String model, float engineVolume) {
         super (brand, model, engineVolume);
     }
-
     @Override
     public void startMovement() {
         System.out.printf("Car %s %s started moving",

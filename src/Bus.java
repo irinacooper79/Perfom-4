@@ -4,7 +4,6 @@ public class Bus extends Transport implements Compating {
     public Bus(String brand, String model, float engineVolume) {
         super(brand, model, engineVolume);
         {
-
             @Override
             public void startMovement () {
             System.out.printf("Bus %s %s started moving",
