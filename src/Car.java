@@ -1,4 +1,3 @@
-
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Car extends Transport implements Competing {

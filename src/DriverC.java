@@ -1,4 +1,3 @@
-
 import ooo.part4.transport.Truck;
 
 public class DriverC extends Driver <Truck> {

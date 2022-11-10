@@ -1,5 +1,4 @@
 import ooo.part4.transport.Transport;
-
 public abstract class Driver <T extends Transport> {
     private final String fullName;
     private final String category;
