@@ -1,5 +1,3 @@
-package ooo.part4.driver;
-
 import ooo.part4.transport.Bus;
 
 public class DriverD extends Driver <Bus> {

@@ -1,4 +1,3 @@
-package ooo.part4.driver;
 
 import ooo.part4.transport.Truck;
 

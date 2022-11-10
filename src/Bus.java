@@ -1,4 +1,3 @@
-package ooo.part4.transport;
 
 import java.util.concurrent.ThreadLocalRandom;
 public class Bus extends Transport implements Compating {

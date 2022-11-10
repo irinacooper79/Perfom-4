@@ -1,5 +1,3 @@
-package ooo.part4.driver;
-
 import ooo.part4.transport.Transport;
 
 public abstract class Driver <T extends Transport> {
