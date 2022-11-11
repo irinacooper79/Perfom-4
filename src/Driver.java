@@ -1,52 +1,56 @@
-import ooo.part4.transport.Transport;
-public abstract class Driver <T extends Transport> {
-    private final String fullName;
-    private final String category;
-    private final int drivingExperience;
-    private final T car;
-    protected Driver(String fullName,
-                     String category,
-                     int drivingExperience,
-                     T car) {
+public abstract class  Driver <D extends Transport> {
+    private String fullName;
+    private String categoryName;
+    public int yearDriving;
+
+    public Driver(String fullName, String categoryName, int yearDriving) {
         this.fullName = fullName;
-        this.category = category;
-        this.drivingExperience = drivingExperience;
-        this.car = car;
+        this.categoryName = categoryName;
+        this.yearDriving = yearDriving;
     }
 
-    public void startMovement() {
-        System.out.printf("Driver %s started moving", this.fullName);
-        this.car.startMovement();
-
-
-        public void stopMovement () {
-            System.out.printf("Driver %s stopped moving", this.fullName);
-            this.car.stopMovement();
-        }
-
-        public void refill () {
-            System.out.printf("Driver %s refilling the %s %s,
-            this.fullName, this.car.getBrand(), this.car.getModel());
-
-            public String getFullName () {
-                return fullName;
-            }
-
-            public String getCategory () {
-                return category;
-            }
-
-            public int getDrivingExperience () {
-                return drivingExperience;
-            }
-
-            @Override
-            public String toString () {
-                return String.format("Водитель %s управляет автомобилем %s и будет участвовать в заезде";
-                this.fullName,
-                        this.car.getBrand(),
-                        this.car.getModel());
-            }
-        }
+    public String getFullName() {
+        return fullName;
     }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public int getYearDriving() {
+        return yearDriving;
+    }
+
+    public void setYearDriving(int yearDriving) {
+        this.yearDriving = yearDriving;
+    }
+
+    public abstract void startDrive();
+
+    public abstract void finishDrive();
+
+    public abstract void relifTransport();
+
+
+    public String driverTruck(Truck truck) {
+        return "Водитель не может водить этот автомобиль";
+    }
+
+    public String driverCar(Car car) {
+        return "Водитель не может водить этот автомобиль";
+
+    }
+    public String driverCar(Bus bus) {
+        return "Водитель не может водить этот автомобиль";
+
+    }
+
 }

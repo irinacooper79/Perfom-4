@@ -1,33 +1,34 @@
-import java.util.concurrent.ThreadLocalRandom;
-
-public class Car extends Transport implements Competing {
-    public Car (String brand, String model, float engineVolume) {
-        super (brand, model, engineVolume);
+public class Car extends Transport implements Competing{
+    public Car(String carBrand, String model, double volume) {
+        super(carBrand, model, volume);
     }
+
     @Override
-    public void startMovement() {
-        System.out.printf("Car %s %s started moving",
-                this.getBrand(),
-                this.getModel());
+    public void start() {
+        System.out.println("Я "+toString());
+        System.out.println("ВСтавляю ключ, завожу двигатель, нажимаю педаль газ");
 
-        @Override
-        public void stopMovement() {
-            System.out.printf("Car %s %s stopped moving",
-                    this.getBrand(),
-                    this.getModel());
 
-            @Override
-            public void pitStop() {
-                System.out.printf("Car %s performed pit-stop",
-                        this.getBrand(),
-                        this.getModel());
+    }
 
-                @Override
-                public int getBestLapTime() {
-                    return ThreadLocalRandom.current().nextInt(1, 100);
+    @Override
+    public void finish() {
+        System.out.println("нажимаю педаль тормоз, глушу мотор, достаю ключ");
 
-                    @Override
-                    public int getMaxSpeed () {
-                        return ThreadLocalRandom.current().nextInt(1, 400);
-                    }
-                }
+    }
+
+    @Override
+    public String getPitStop() {
+        return toString() + "Время пит стопа!";
+    }
+
+    @Override
+    public double bestTime() {
+        return 0;
+    }
+
+    @Override
+    public double maxSpeed() {
+        return 0;
+    }
+}

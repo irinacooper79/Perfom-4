@@ -1,53 +1,30 @@
 
-import ooo.part4.driver.DriverC;
-import ooo.part4.driver.DriverD;
-import ooo.part4.transport.Car;
-import ooo.part4.transport.Bus;
-import ooo.part4.transport.Transport;
-    public class Main {
-        public static void main(String[] args) {
-            System.out.println("Hello world!");
-            Car car = new Car ("Kia", "Rio",1.6f);
-            DriverB DriverB = new DriverB("Меладзе Валерий", 5, car);
-            System.out.println(DriverB);
+import transport.*;
 
-            Bus volgabus = new Bus ("Volgabus", "Дельта 12", 1.7f);
-            Bus zonda = new Bus("Zonda", "YCK6116HGL3", 2.5f);
-            Bus daewoo = new Bus("Daewoo", "BC212MA", 3.0f);
-            Bus gazelle = new Bus("Газель", "Next A63R42", 2.0f);
+public class Main {
+    public static void main(String[] args) {
+        Car car1 =new Car("Лада","Гранта",1.6);
+        Car car2 =new Car("Волга","Siber",2.6);
+        Car car3 =new Car("УАЗ","Патриот",3.6);
+        Car car4 =new Car("Ока","Гном",1.0);
+        Bus bus1=new Bus("ПАЗ","3205",1.2);
+        Bus bus2=new Bus("ИКАРУС","417И",1.6);
+        Bus bus3=new Bus("VOLGABUS","5270G",4.2);
+        Bus bus4=new Bus("ЛАЗ","5292",1.2);
+        Truck truck1=new Truck("КАМАЗ","Компас",3.2);
+        Truck truck2=new Truck("ГАЗ","НЕКСТ",2.7);
+        Truck truck3=new Truck("НЕФАЗ","4514",3.2);
+        Truck truck4=new Truck("Урал","4320",3.2);
+        DriverB alex= new DriverB("Алекс Шумахер", "В",10);
+        DriverC mike=new DriverC("Михаил Петров","С",10);
+        DriverD vova=new DriverD("Владимир Сайвор","D",10);
 
-            Car kia = new Car("Kia", "Rio", 1.6f);
-            Car honda = new Car("Honda", "CR-V", 2.0f);
-            Car hyundai = new Car("Hyundai", "Creta", 1.8f);
-            Car toyota = new Car("Toyota", "Camry", 3.0f);
+        car1.start();
+        System.out.println( car2.bestTime());
+        System.out.println(alex.driverCar(car3));
+        System.out.println(alex.driverTruck(truck1));
+        System.out.println(mike.driverTruck(truck1));
+        System.out.println(vova.driverBus(bus1));
 
-            Truck pazik = new Truck("Паз", "Вектор", 3.7f);
-            Truck kavz = new Truck("КАВЗ", "4239", 2.5f);
-            Truck gaz = new Truck("ГАЗ", "3308 Садко", 2.5f);
-            Truck gazon = new Truck("ГАЗон", "Next", 3.7f);
-
-            System.out.println(volgabus);
-            System.out.println(toyota);
-            System.out.println(pazik);
-            honda.startMovement();
-
-            honda.pitStop();
-            honda.bestLapTime();
-            System.out.println();
-            honda.maxSpeed();
-            System.out.println();
-
-            pazik.pitStop();
-            pazik.bestLapTime();
-            System.out.println();
-            pazik.maxSpeed();
-            System.out.println();
-
-            volgabus.pitStop();
-            volgabus.bestLapTime();
-            System.out.println();
-            volgabus.maxSpeed();
-            System.out.println();
-        }
     }
 }

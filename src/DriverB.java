@@ -1,5 +1,6 @@
-public class DriverC extends Driver<Truck>{
-    public DriverC(String fullName, String categoryName, int yearDriving) {
+public class DriverB extends Driver<Car>{
+
+    public DriverB(String fullName, String categoryName, int yearDriving) {
         super(fullName, categoryName, yearDriving);
     }
 
@@ -19,9 +20,9 @@ public class DriverC extends Driver<Truck>{
     }
 
     @Override
-    public String driverTruck(Truck truck) {
+    public String driverCar(Car car) {
         return "Водитель по имени: " +getFullName()+
-                ", управляет транспортным средством" +truck.toString()+
+                ", управляет транспортным средством" +car.toString()+
                 " и будет участвовать в заезде!";
     }
 }

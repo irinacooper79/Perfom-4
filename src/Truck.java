@@ -1,5 +1,6 @@
-public class Bus extends Transport implements Competing{
-    public Bus(String carBrand, String model, double volume) {
+
+public class Truck extends Transport implements Competing{
+    public Truck(String carBrand, String model, double volume) {
         super(carBrand, model, volume);
     }
 
@@ -15,16 +16,16 @@ public class Bus extends Transport implements Competing{
 
     @Override
     public String getPitStop() {
-        return "Автобус. Остановка для смены колес";
+        return null;
     }
 
     @Override
     public double bestTime() {
-        return 10;
+        return 0;
     }
 
     @Override
     public double maxSpeed() {
-        return 75;
+        return 0;
     }
 }
